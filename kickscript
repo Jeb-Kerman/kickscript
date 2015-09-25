@@ -1,0 +1,43 @@
+// for use with a toggle (this IF, ELSE, and last ENDIF are unnecessary if you aren't using the toggle)
+IF(@kicktog = TRUE)
+ELSE
+
+// What to look for in the chat log (this is where you put names and nicknames that you want the script to activate on.
+IFMATCHES(%&chat%,kick eltigre910|kick monkey)
+    MATCH(%&chat%,kick eltigre910 (.*),&kickmsg, 1)
+//IFMATCHES(%CHATCLEAN%,  "./kick eltigre|./kick monkey|./kick tigre") ;
+ECHO("/kick eltigre910 %&kickmsg%");
+ENDIF;
+
+
+IFMATCHES(%&chat%,kick bucket|kick pail|kick baebakat)
+    MATCH(%&chat%,kick eltigre910 (.*),&kickmsg, 1)
+//IFMATCHES(%CHATCLEAN%,  "./kick bucket|./kick pail|./kick baebakat") ;
+ECHO("/kick baebakat");
+ENDIF;
+
+IFMATCHES(%&chat%,kick kboy|kick kboy101222)
+    MATCH(%&chat%,kick kboy101222 (.*),&kickmsg, 1)
+ECHO("/kick kboy101222 %&kickmsg%");
+ENDIF;
+
+IFMATCHES(%&chat%,kick adc|kick derpdc|kick bluedc)
+    MATCH(%&chat%,kick bluedc (.*),&kickmsg, 1)
+ECHO("/kick bluedc %&kickmsg%");
+ENDIF;
+
+IFMATCHES(%&chat%,kick art|kick arty|./kickartefice)
+    MATCH(%&chat%,kick artefice (.*),&kickmsg, 1)
+IFMATCHES(%CHATCLEAN%,  "./kick art|./kick arty|./kick artefice") ;
+ECHO("/kick artefice %&kickmsg%");
+ENDIF;
+
+IFMATCHES(%&chat%,kick ninja|kick ninji|ninjamerson)
+    MATCH(%&chat%,kick ninjamerson (.*),&kickmsg, 1)
+//IFMATCHES(%CHATCLEAN%,  "./kick ninja|./kick ninj|./kick ninjamerson") ;
+ECHO("/kick ninjamerson %&kickmsg%");
+ENDIF;
+
+// This is where you can add extra people
+
+ENDIF;
